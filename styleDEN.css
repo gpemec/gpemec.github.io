@@ -1,0 +1,439 @@
+
+/* GENERAL STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/*
+key colors:
+grey    CBCCD8
+grey mas claro      d0d1db
+SERENITY 93a9d1
+fondo den&david #EFEBE8
+*/
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+ margin: 0;
+  padding: 0;
+
+}
+    
+
+body {
+    background: #EFEBE8;
+    color: #fff;
+}
+
+
+@font-face{
+font-family: "Alexander Lettering Regular";
+src: url(fonts/Alexander Lettering.ttf);
+font-style: normal;
+font-weight: 100;
+}
+
+
+@font-face {
+font-family: "Dolce Vita Heavy";
+src: url(fonts/Dolce Vita Heavy Bold.ttf);
+font-style: normal;
+font-weight: 100;     
+}
+
+
+h1, h3, h4, p, header .btn, {
+    font-size: 120px;
+    font-family: "Alexander Lettering";
+}
+
+h1 {
+    margin:  0px 0px;
+    font-size: 200px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Alexander Lettering";
+}
+
+h3 {
+    margin:  15px 0px 5px 0px;
+    font-size: 45px;
+    text-align: center;
+    font-family: "Dolce Vita Heavy";
+    color: #000;
+}
+
+.couplename h1 {
+    padding-top: 200px;
+}
+
+h2 {
+    font-size: 150px;
+}
+
+
+.date p{
+    background-color: #93a9d1;
+    padding: 10px 30px;
+    margin: 10px auto;
+    display: inline-block;
+    font-size: 52px;
+    text-align: center;
+    color: #fff;
+    align-items: center;
+    font-family: 'Alexander Lettering', sans-serif;
+}
+
+
+h4, h5 {
+  font-size: 2rem;
+}
+
+h3:after {
+  content: '';
+  display: block;
+  width: 10%;
+  padding-top: 5px;
+}
+
+
+a {
+  text-align: center;
+  outline: none;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+  color: steelblue;
+  font: Ailerons;
+}
+
+
+.btn_date {
+    padding: 19px 10px;
+    font-size: 30px;
+    background-color: rgb(34, 34, 34);
+    color: #f7eeee;
+    margin: 35px 40% 0px 40%;
+    text-align: center;
+    align-items: center;
+}
+
+
+btn:link,
+btn:visited {
+    color: #f5f5fa;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #0909de;
+}
+
+btn:hover,
+btn:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+.block {
+  width: 130px;
+  margin: 0 auto;
+  display: block;
+}
+
+
+
+/* HEADER STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+header, h3 {
+    text-align: center;
+    animation-fill-mode: forwards;
+}
+
+header {
+    background: url(img/flores.jpg) no-repeat bottom;
+    background-size: 100% 390px;
+}
+
+
+header, .places1, .regalos {
+    height: 100vh !important;
+}
+.main-nav, ul {
+    margin-top: 0px;
+    padding: 0px 0px 10px 0px;
+    background: #93a9d1;
+    color: #fff;
+    font-family:  "Dolce Vita Heavy";
+    width: 100%;
+}
+
+
+.main-nav li a {
+    display: block;
+    list-style-type: none;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 15px;
+    align-items: center;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+	padding: 8px 10px;
+    color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1.3rem;
+	border-bottom: 2px solid transparent;
+     float: left;
+     padding: 5px;
+
+ }
+    
+.main-nav li a:hover {
+     background-color: #c5ced4;
+}
+
+
+header .btn {
+  text-transform: uppercase;
+}
+
+
+
+header .btn {
+  margin-top: 100px;
+}
+
+
+
+.cover {
+    display: block;
+    background-size: cover;
+    margin: 2% 78% 0% 27%;
+    text-align: center;
+    border:20px solid #fff;
+    width: 700px;
+    height: 420px;
+}
+
+
+nav ul, .contact ul {
+  list-style: none;
+  font-size: 0;
+}
+
+nav li, .contact li {
+  margin-bottom: 0;
+  display: inline-block;
+}
+
+nav li {
+  width: 50%;
+}
+
+nav a {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  padding: 7px 0;
+  line-height: 30px;
+}f
+
+nav li:nth-child(2n+1) a:after {
+  position: absolute;
+  content: '';
+  top: 19.5px;
+  right: -2.5px;
+  z-index: 10;
+  border-radius: 100%;
+  background: steelblue;
+  width: 5px;
+  height: 5px;
+}
+
+
+/* teTE 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.options {
+    display: inline;
+    margin: 0 auto;
+}
+
+.btn_church,
+.btn_confirm,
+.btn_party{
+    font-family: "Dolce Vita Heavy";
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #222;
+    background-color: #CBCCD8;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-left: 3%;
+    margin-bottom: 10px;
+/*    border: none; */
+}
+
+.church_description p,
+.party_description p{
+    background-color: #93a9d1;
+    padding: 10px 40px;
+    margin: 9px auto;
+    display: inline-block;
+    font-size: 53px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Alexander Lettering', sans-serif;
+}
+
+/* PLACES 1
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.places1 {
+    background-image:linear-gradient(rgba(147, 169, 209, 0.8),rgba(147, 169, 209, 0.8)), url(img/flores2.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 100% 62%;
+    text-align: center;
+}
+
+.places1_title,
+.places2_title{
+    display: block;
+}
+
+.places1date, .places2date {
+    display: inline;
+    margin: 0 auto;
+}
+
+.btn_places1,
+.btn_places2
+{
+    font-family: "Dolce Vita Heavy";
+    padding: 12px 120px;
+    font-size: 35px;
+    color: #222;
+    background-color: #CBCCD8;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    margin-left: 0%;
+}
+.places1 h3 span,
+.regalos h3 span,
+.regalos h3 span {
+    margin-top: 0px;
+    padding: 5px 20px 5px 20px;
+    background-color: #CBCCD8 ;
+    border-radius: 10px;
+}
+
+.regalos h3 {
+    margin-top: 0px;
+}
+
+.regalos img {
+    margin-bottom: 40px;
+}
+.gifts_description p,
+.hotel_description p{
+    background-color: #93a9d1;
+    padding: 10px 40px;
+    margin: 9px auto;
+    display: inline-block;
+    font-size: 32px;
+    text-align: center;
+    color: #fff;
+    font-family: "Dolce Vita Heavy";
+    line-height: 1.3;
+}
+
+.hotel_description p{ 
+ font-size: 27px;   
+}
+
+.btn_places2
+{
+    padding: 12px 55px;
+}
+
+.places2_title {
+    padding: 2px 1px;
+    margin: 2% 38%;
+}
+
+
+
+/* PLACES 2 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+.regalos {
+    background-image:linear-gradient(rgba(147, 169, 209, 0.8),rgba(147, 169, 209, 0.8)), url(img/flores2.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% 40%;
+    text-align: center;
+}
+
+.btn_hotel{
+    font-family: "Dolce Vita Heavy";
+    padding: 10px 20px;
+    font-size: 27px;
+    color: #222;
+    background-color: #93a9d1;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-left: 3%;
+    margin-bottom: 10px;
+}
+
+
+
+/* GIFTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+ .regalos img {
+    width: 270px;
+    height: 100px;
+    display: inline-block;
+
+}
+
+
+/* MEDIA QUERIES STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 550px) {
+  nav li {
+    width: auto;
+  }
+
+  nav li:nth-child(2n+1) a:after {
+    content: none;
+  }
+
+  nav li:last-child a {
+    border-right: none;
+  }
+
+  header a:hover, a:hover {
+    box-shadow: 0 8px #f4ba04;
+  }
+
+  header a:active, .about a:active {
+    box-shadow: 0 4px #f4ba04;
+    -webkit-transform: translateY(4px);
+        -ms-transform: translateY(4px);
+            transform: translateY(4px);
+  }
+
+
+}
