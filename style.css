@@ -1,439 +1,325 @@
-
-/* GENERAL STYLES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-/*
-key colors:
-grey    CBCCD8
-grey mas claro      d0d1db
-SERENITY 93a9d1
-fondo den&david #EFEBE8
-*/
-
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+#quiz, #lastScreen, #answersScreen {
+	 display: flex;
+	 flex-direction: column;
+	 width: 80%;
+	 height: 600px;
+	 margin: 30px auto;
+	 padding: 25px;
+	 font-family: Sans-serif;
 }
-
-
-html {
- margin: 0;
-  padding: 0;
-
+ #quiz .options, #lastScreen .options, #answersScreen .options {
+	 margin: 0 0 20px 0;
 }
-    
-
-body {
-    background: #EFEBE8;
-    color: #fff;
+ #quiz .options .option, #lastScreen .options .option, #answersScreen .options .option {
+     text-align: center;
+	 margin: 15px;
+	 width: 80px;
+	 height: 50px;
+	 line-height: 50px;
+	 padding: 5px 10px 0 10px;
+	 box-shadow: 3px 3px 13px #eee;
+     position: relative;
+	 float: left;
 }
-
-
-@font-face{
-font-family: "Alexander Lettering Regular";
-src: url(fonts/Alexander Lettering.ttf);
-font-style: normal;
-font-weight: 100;
+ #quiz .options .option:before, #lastScreen .options .option:before, #answersScreen .options .option:before, #quiz .options .option:after, #lastScreen .options .option:after, #answersScreen .options .option:after {
+	 position: absolute;
+	 left: 0;
+	 content: "";
+	 transition: 0.8s all ease;
+	 bottom: 0;
 }
-
-
-@font-face {
-font-family: "Dolce Vita Heavy";
-src: url(fonts/Dolce Vita Heavy Bold.ttf);
-font-style: normal;
-font-weight: 100;     
+ #quiz .options .option:before, #lastScreen .options .option:before, #answersScreen .options .option:before {
+	 height: 4px;
+	 width: 0%;
+	 background: #70ecfd;
 }
-
-
-h1, h3, h4, p, header .btn, {
-    font-size: 120px;
-    font-family: "Alexander Lettering";
+ #quiz .options .option:after, #lastScreen .options .option:after, #answersScreen .options .option:after {
+	 width: 4px;
+	 height: 0%;
+	 background: #70ecfd;
 }
-
-h1 {
-    margin:  0px 0px;
-    font-size: 200px;
-    font-weight: bold;
-    text-align: center;
-    font-family: "Alexander Lettering";
+ #quiz .options .option:hover::before, #lastScreen .options .option:hover::before, #answersScreen .options .option:hover::before, #quiz .options .option.clicked::before, #lastScreen .options .option.clicked::before, #answersScreen .options .option.clicked::before {
+	 width: 100%;
 }
-
-h3 {
-    margin:  15px 0px 5px 0px;
-    font-size: 45px;
-    text-align: center;
-    font-family: "Dolce Vita Heavy";
-    color: #000;
+ #quiz .options .option:hover, #lastScreen .options .option:hover, #answersScreen .options .option:hover {
+	 cursor: pointer;
 }
-
-.couplename h1 {
-    padding-top: 200px;
-}
-
-h2 {
-    font-size: 150px;
-}
-
-
-.date p{
-    background-color: #93a9d1;
-    padding: 10px 30px;
-    margin: 10px auto;
-    display: inline-block;
-    font-size: 52px;
-    text-align: center;
-    color: #fff;
-    align-items: center;
-    font-family: 'Alexander Lettering', sans-serif;
-}
-
-
-h4, h5 {
-  font-size: 2rem;
-}
-
-h3:after {
-  content: '';
-  display: block;
-  width: 10%;
-  padding-top: 5px;
-}
-
-
-a {
-  text-align: center;
-  outline: none;
-  display: inline-block;
-  text-decoration: none;
-  font-size: 14px;
-  color: steelblue;
-  font: Ailerons;
-}
-
-
-.btn_date {
-    padding: 19px 10px;
-    font-size: 30px;
-    background-color: rgb(34, 34, 34);
-    color: #f7eeee;
-    margin: 35px 40% 0px 40%;
-    text-align: center;
-    align-items: center;
-}
-
-
-btn:link,
-btn:visited {
-    color: #f5f5fa;
-    text-decoration: none;
-    padding-bottom: 1px;
-    border-bottom: 1px solid #0909de;
-}
-
-btn:hover,
-btn:active {
-    color: #555;
-    border-bottom: 1px solid transparent;
-}
-
-.block {
-  width: 130px;
-  margin: 0 auto;
-  display: block;
-}
-
-
-
-/* HEADER STYLES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-
-header, h3 {
-    text-align: center;
-    animation-fill-mode: forwards;
-}
-
-header {
-    background: url(img/flores.jpg) no-repeat bottom;
-    background-size: 100% 390px;
-}
-
-
-header, .places1, .regalos {
-    height: 100vh !important;
-}
-.main-nav, ul {
-    margin-top: 0px;
-    padding: 0px 0px 10px 0px;
-    background: #93a9d1;
-    color: #fff;
-    font-family:  "Dolce Vita Heavy";
-    width: 100%;
-}
-
-
-.main-nav li a {
-    display: block;
-    list-style-type: none;
-    margin-left: 50px;
-    margin-right: 50px;
-    padding: 15px;
-    align-items: center;
-}
-
-.main-nav li a:link,
-.main-nav li a:visited {
-	padding: 8px 10px;
-    color: #fff;
-	text-decoration: none;
-	text-transform: uppercase;
-	font-size: 1.3rem;
-	border-bottom: 2px solid transparent;
+ #quiz .button, #lastScreen .button, #answersScreen .button {
+	 height: 50px;
+	 width: 50px;
+	 color: black;
+	 border-radius: 50px;
+	 background-color: #d9faff;
+	 margin: 35px 10px 35px 10px;
+	 align-self: flex-start;
+	 position: relative;
+	 font-size: 2em;
+	 font-family: "Raleway", sans-serif;
      float: left;
-     padding: 5px;
-
- }
-    
-.main-nav li a:hover {
-     background-color: #c5ced4;
+}
+ #quiz .button:hover, #lastScreen .button:hover, #answersScreen .button:hover, #quiz .button.clicked, #lastScreen .button.clicked, #answersScreen .button.clicked {
+	 cursor: pointer;
+}
+ #quiz .button:hover:before, #lastScreen .button:hover:before, #answersScreen .button:hover:before, #quiz .button.clicked:before, #lastScreen .button.clicked:before, #answersScreen .button.clicked:before {
+	 opacity: 0.9;
+	 width: 120px;
+}
+ #quiz .button:hover:after, #lastScreen .button:hover:after, #answersScreen .button:hover:after, #quiz .button.clicked:after, #lastScreen .button.clicked:after, #answersScreen .button.clicked:after {
+	 left: 5px;
+}
+ #quiz .button:after, #lastScreen .button:after, #answersScreen .button:after {
+	 position: absolute;
+	 content: attr(data-txt);
+	 transition: 350ms all ease;
+	 font-family: "Raleway", sans-serif;
+	 top: -5px;
+	 left: 23px;
+	 height: 50px;
+	 width: 150px;
+	 line-height: 50px;
+	 padding: 5px;
+	 z-index: 1000;
+}
+ #quiz .button:before, #lastScreen .button:before, #answersScreen .button:before {
+	 opacity: 0;
+	 position: absolute;
+	 content: '';
+	 transition: 500ms all ease;
+	 transition-delay: 100ms;
+	 background-color: #70ecfd;
+	 top: 0px;
+	 left: 0;
+	 height: 50px;
+	 width: 0px;
+	 line-height: 50px;
+	 z-index: 1;
+	 border-radius: 30px;
+}
+ #quiz .button.retake, #lastScreen .button.retake, #answersScreen .button.retake {
+	 background-color: #e5f9bd;
+	 align-self: flex-start;
+}
+ #quiz .button.retake:after, #lastScreen .button.retake:after, #answersScreen .button.retake:after {
+	 width: 250px;
+}
+ #quiz .button.retake:before, #lastScreen .button.retake:before, #answersScreen .button.retake:before {
+	 background-color: #d1f386;
+}
+ #quiz .button.retake:hover:before, #lastScreen .button.retake:hover:before, #answersScreen .button.retake:hover:before, #quiz .button.retake.clicked:before, #lastScreen .button.retake.clicked:before, #answersScreen .button.retake.clicked:before {
+	 width: 250px;
+}
+ #quiz .button.answers, #lastScreen .button.answers, #answersScreen .button.answers {
+	 align-self: flex-start;
+	 background-color: #fca7a7;
+}
+ #quiz .button.answers:after, #lastScreen .button.answers:after, #answersScreen .button.answers:after {
+	 width: 230px;
+}
+ #quiz .button.answers:before, #lastScreen .button.answers:before, #answersScreen .button.answers:before {
+	 background-color: #fc624d;
+}
+ #quiz .button.answers:hover:before, #lastScreen .button.answers:hover:before, #answersScreen .button.answers:hover:before, #quiz .button.answers.clicked:before, #lastScreen .button.answers.clicked:before, #answersScreen .button.answers.clicked:before {
+	 width: 230px;
+}
+ #quiz #feedback, #lastScreen #feedback, #answersScreen #feedback {
+	 position: absolute;
+	 display: flex;
+	 flex-direction: column;
+	 width: 80%;
+	 margin: auto;
+	 height: auto;
+	 background: white;
+	 box-shadow: 3px 3px 13px #eee;
+	 z-index: 1000;
+	 padding: 15px;
+	 margin-left: -2%;
+}
+ #quiz #feedback .feedbackFooter, #lastScreen #feedback .feedbackFooter, #answersScreen #feedback .feedbackFooter {
+	 display: flex;
+	 flex-direction: row;
+	 width: 100%;
+	 align-items: center;
+	 justify-content: flex-end;
+}
+ .question h1, #lastScreen h1, #answersScreen h1 {
+	 position: relative;
+}
+ .question h1:before, #lastScreen h1:before, #answersScreen h1:before {
+	 content: "";
+	 position: absolute;
+	 left: -30px;
+	 top: -25px;
+	 height: 60px;
+	 width: 60px;
+	 color: black;
+	 border-radius: 50px;
+	 background-color: #d5f7ff;
+	 opacity: 0.7;
+}
+ .question h1:after, #lastScreen h1:after, #answersScreen h1:after {
+	 position: absolute;
+	 left: 0;
+	 top: 0;
+	 height: 50px;
+	 width: 50px;
+	 color: black;
+	 border-radius: 50px;
+	 background-color: #d9faff;
+	 opacity: 0.6;
+	 z-index: 1000;
+}
+ .question h1:after {
+	 content: "";
+}
+ #lastScreen h1:after {
+	 content: "";
+}
+ #answersScreen h1:before {
+	 background: #fc624d;
+	 top: -17px;
+}
+ #answersScreen h1:after {
+	 content: "Answers";
+	 background-color: #fca7a7;
+}
+ #answers h2 {
+	 position: relative;
+}
+ #answers h2:before {
+	 content: "";
+	 position: absolute;
+	 left: 0px;
+	 top: 0px;
+	 height: 20px;
+	 width: 20px;
+	 color: black;
+	 border-radius: 50px;
+	 background-color: #d5f7ff;
+	 opacity: 0.7;
+}
+ #answers h2:after {
+	 position: absolute;
+	 left: -5px;
+	 top: -10px;
+	 height: 12px;
+	 width: 12px;
+	 color: black;
+	 border-radius: 50px;
+	 background-color: #d9faff;
+	 opacity: 0.6;
+	 z-index: 1000;
+	 content: "";
+}
+ .arrowNextQ {
+	 display: flex;
+	 width: 10%;
+	 margin-left: 20px;
+}
+ .arrowNextQ .triangle {
+	 width: 0px;
+	 height: 0px;
+	 border-bottom: 17px solid transparent;
+	 border-top: 17px solid transparent;
+	 border-left: 20px solid black;
+	 position: relative;
+}
+ .arrowNextQ .triangle:before {
+	 position: absolute;
+	 content: '';
+	 width: 0px;
+	 height: 0px;
+	 border-bottom: 9px solid transparent;
+	 border-top: 9px solid transparent;
+	 border-left: 11px solid white;
+	 top: -9px;
+	 left: -17px;
+}
+ .arrowNextQ .triangle2 {
+	 width: 22px;
+	 height: 22px;
+	 border-bottom: 3px solid black;
+	 border-right: 3px solid black;
+	 transform: rotate(-45deg);
+	 position: relative;
+	 margin-left: -14px;
+	 margin-top: 5px;
+}
+ .arrowNextQ .triangle2:before {
+	 content: '';
+	 position: absolute;
+	 width: 22px;
+	 height: 22px;
+	 border-bottom: 3px solid black;
+	 border-right: 3px solid black;
+	 top: 0px;
+	 left: 0px;
+}
+ .arrowNextQ:hover {
+	 cursor: pointer;
+}
+ .arrowNextQ:hover .triangle2 {
+	 animation: bouncetoLeft 450ms cubic-bezier(0, 1, 0.89, 1);
+	 animation-direction: reverse;
+	 position: relative;
+}
+ .arrowNextQ:hover .triangle2:before {
+	 content: '';
+	 position: absolute;
+	 width: 24px;
+	 height: 24px;
+	 border-bottom: 3px solid black;
+	 border-right: 3px solid black;
+	 top: -2px;
+	 left: -2px;
+	 animation: appearing ease-in;
+	 animation-duration: 700ms;
+	 animation-delay: 320ms;
+	 animation-fill-mode: forwards;
+	 opacity: 0;
 }
 
-
-header .btn {
-  text-transform: uppercase;
+.bonafont {
+    background-color: #d9faff;
+  border: 1px solid black;;
+    font-size: 19px;
+  padding: 16px;
+  text-decoration: none;
+  margin: 26px 6px 6px 6px;
+  cursor: pointer;
 }
 
-
-
-header .btn {
-  margin-top: 100px;
+ #answersScreen {
+	 height: auto;
 }
-
-
-
-.cover {
-    display: block;
-    background-size: cover;
-    margin: 2% 78% 0% 27%;
-    text-align: center;
-    border:20px solid #fff;
-    width: 700px;
-    height: 420px;
+ @keyframes bouncetoLeft {
+	 0% {
+		 transform: translatex(0px) rotate(-45deg);
+		 opacity: 1;
+	}
+	 50% {
+		 transform: translatex(-7px) rotate(-45deg);
+		 opacity: 1;
+	}
+	 100% {
+		 transform: translatex(0px) rotate(-45deg);
+		 opacity: 0.8;
+	}
 }
-
-
-nav ul, .contact ul {
-  list-style: none;
-  font-size: 0;
+ @keyframes appearing {
+	 0% {
+		 left: -2px;
+		 top: -2px;
+		 opacity: 0.2;
+	}
+	 75% {
+		 left: 10px;
+		 top: 10px;
+		 opacity: 0.9;
+	}
+	 100% {
+		 opacity: 0;
+		 left: 15px;
+		 top: 15px;
+	}
 }
-
-nav li, .contact li {
-  margin-bottom: 0;
-  display: inline-block;
-}
-
-nav li {
-  width: 50%;
-}
-
-nav a {
-  position: relative;
-  width: 100%;
-  height: 30px;
-  padding: 7px 0;
-  line-height: 30px;
-}f
-
-nav li:nth-child(2n+1) a:after {
-  position: absolute;
-  content: '';
-  top: 19.5px;
-  right: -2.5px;
-  z-index: 10;
-  border-radius: 100%;
-  background: steelblue;
-  width: 5px;
-  height: 5px;
-}
-
-
-/* teTE 
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.options {
-    display: inline;
-    margin: 0 auto;
-}
-
-.btn_church,
-.btn_confirm,
-.btn_party{
-    font-family: "Dolce Vita Heavy";
-    padding: 10px 20px;
-    font-size: 20px;
-    color: #222;
-    background-color: #CBCCD8;
-    border-radius: 10px;
-    margin-top: 15px;
-    margin-left: 3%;
-    margin-bottom: 10px;
-/*    border: none; */
-}
-
-.church_description p,
-.party_description p{
-    background-color: #93a9d1;
-    padding: 10px 40px;
-    margin: 9px auto;
-    display: inline-block;
-    font-size: 53px;
-    text-align: center;
-    color: #fff;
-    font-family: 'Alexander Lettering', sans-serif;
-}
-
-/* PLACES 1
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.places1 {
-    background-image:linear-gradient(rgba(147, 169, 209, 0.8),rgba(147, 169, 209, 0.8)), url(img/flores2.jpg);
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    background-size: 100% 62%;
-    text-align: center;
-}
-
-.places1_title,
-.places2_title{
-    display: block;
-}
-
-.places1date, .places2date {
-    display: inline;
-    margin: 0 auto;
-}
-
-.btn_places1,
-.btn_places2
-{
-    font-family: "Dolce Vita Heavy";
-    padding: 12px 120px;
-    font-size: 35px;
-    color: #222;
-    background-color: #CBCCD8;
-    border-radius: 10px;
-    margin-top: 15px;
-    margin-bottom: 8px;
-    margin-left: 0%;
-}
-.places1 h3 span,
-.regalos h3 span,
-.regalos h3 span {
-    margin-top: 0px;
-    padding: 5px 20px 5px 20px;
-    background-color: #CBCCD8 ;
-    border-radius: 10px;
-}
-
-.regalos h3 {
-    margin-top: 0px;
-}
-
-.regalos img {
-    margin-bottom: 40px;
-}
-.gifts_description p,
-.hotel_description p{
-    background-color: #93a9d1;
-    padding: 10px 40px;
-    margin: 9px auto;
-    display: inline-block;
-    font-size: 32px;
-    text-align: center;
-    color: #fff;
-    font-family: "Dolce Vita Heavy";
-    line-height: 1.3;
-}
-
-.hotel_description p{ 
- font-size: 27px;   
-}
-
-.btn_places2
-{
-    padding: 12px 55px;
-}
-
-.places2_title {
-    padding: 2px 1px;
-    margin: 2% 38%;
-}
-
-
-
-/* PLACES 2 
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-
-.regalos {
-    background-image:linear-gradient(rgba(147, 169, 209, 0.8),rgba(147, 169, 209, 0.8)), url(img/flores2.jpg);
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: 100% 40%;
-    text-align: center;
-}
-
-.btn_hotel{
-    font-family: "Dolce Vita Heavy";
-    padding: 10px 20px;
-    font-size: 27px;
-    color: #222;
-    background-color: #93a9d1;
-    border-radius: 10px;
-    margin-top: 15px;
-    margin-left: 3%;
-    margin-bottom: 10px;
-}
-
-
-
-/* GIFTS
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
- .regalos img {
-    width: 270px;
-    height: 100px;
-    display: inline-block;
-
-}
-
-
-/* MEDIA QUERIES STYLES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-@media (min-width: 550px) {
-  nav li {
-    width: auto;
-  }
-
-  nav li:nth-child(2n+1) a:after {
-    content: none;
-  }
-
-  nav li:last-child a {
-    border-right: none;
-  }
-
-  header a:hover, a:hover {
-    box-shadow: 0 8px #f4ba04;
-  }
-
-  header a:active, .about a:active {
-    box-shadow: 0 4px #f4ba04;
-    -webkit-transform: translateY(4px);
-        -ms-transform: translateY(4px);
-            transform: translateY(4px);
-  }
-
-
-}
+ 
