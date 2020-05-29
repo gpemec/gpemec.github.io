@@ -59,13 +59,26 @@ $(document).ready(function() {
       if (icon.hasClass("ion-md-menu")) {
         icon.addClass("ion-md-close");
         icon.removeClass("ion-md-menu");
-//          $(".js--main-nav").slideDown();
-      } else {
+      } 
+        else {
         icon.addClass("ion-md-menu");
         icon.removeClass("ion-md-close");
-      }
-  });
+      }            
+  }); 
 });
 
+
+$(document).ready(function(){
+	$("a").on('click',function(event) {
+        if (this.hash !== "") {
+		event.preventDefault();
+        var hash = this.hash;
+		$("html, body").animate({scrollTop: $(hash).offset().top
+      }, 200, function(){
+        window.location.hash = hash;
+        });
+      } 
+    });
+});
 
 
