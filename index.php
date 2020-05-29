@@ -129,6 +129,7 @@ NÚMERO DE EVENTO 522272<br>
             <br>
         </div>
         <div class="logos0">
+<!--          Insetar aqui el link de la mesa de regalos-->
            <a href="https://linkdelamesaderegalos.com" img src="img/logopalacio.svg" alt="palacio"> 
            </a>
         </div>
