@@ -47,7 +47,7 @@
             <a href="https://goo.gl/maps/6mEc5DC5X3uJGBoSA"  target="_blank" class="btn_church">IGLESIA</a>
             <a href="https://goo.gl/maps/sNXMg451aKpGW43f7"  target="_blank" class="btn_party">BANQUETE</a>
 <!--            EN HREF agregar la parte donde se insertara la forma-->
-            <a href="#"  target="_blank" class="btn_confirm">CONFIRMAR ASISTENCIA</a>
+            <a href="feedback.php" target="_self" class="btn_confirm">CONFIRMAR ASISTENCIA</a>
             </div>
             
         <div class="clock-section">
@@ -129,7 +129,8 @@ NÚMERO DE EVENTO 522272<br>
             <br>
         </div>
         <div class="logos0">
-             <img src="img/logopalacio.svg" alt="palacio">
+           <a href="https://linkdelamesaderegalos.com" img src="img/logopalacio.svg" alt="palacio"> 
+           </a>
         </div>
       </div>
     
@@ -151,7 +152,7 @@ NÚMERO DE EVENTO 522272<br>
             <br>
         </div>
         <div class="logos">
-            <a href="https://goo.gl/maps/6mEc5DC5X3uJGBoSA"  target="_blank" class="btn_attendance">Confirmar asistencia</a>
+            <a href="feedback.php"  target="_self" class="btn_attendance">Confirmar asistencia</a>
         </div>
       </div>
     </div>

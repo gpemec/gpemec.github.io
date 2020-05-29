@@ -14,22 +14,21 @@ if(@$_GET['q']== 'quiz' && @$_GET['step']== 2 && @$_GET['eid'] == 'asdkjg51ap') 
     $colector = @$_POST;
     $japon= $_SESSION['pivote'];
 
-$list_scores = [1, 0, 0];
 $user_answer = $colector['answer'];
 $user_np = $colector['bnumq'];
-$user_typescore = $colector['stype'];   
+//$user_typescore = $colector['stype'];   
 
 if ( array_key_exists( 0, $user_np)) {
     $c=0;
-        $puntaje[$c] = $user_answer[$c] * $list_scores[$user_typescore[$c]]; 
+        $puntaje = $user_answer[$c]; 
     }
 //  Respuesta
-    $suma = ($puntaje);
+    $suma = $puntaje;
 // Insertando en DB
-    $q=mysqli_query($con,"INSERT INTO clonehistory VALUES('$email','$eid','','','',
-    '','$suma', '', '', '',
-    '', '', '', '', NOW() )");
-    echo 'Cuando las otras llegan  ' , '<br>' ;
+    $q=mysqli_query($con,"INSERT INTO `data` VALUES ('$email','$eid','$puntaje[0]','',
+    '$puntaje[0]','', '', '', NOW())");
+//    echo 'Cuando las otras llegan  ' , '<br>' ;
+//    var_dump($GLOBALS);
     header("location:account.php?q=result&eid=$eid");
 }
 
@@ -64,7 +63,7 @@ if ( array_key_exists( 0, $user_np)) {
 //  Es el numero de personas seleccionadas
     $count_userselecc = array_sum($user_answer);
 // Insertando en DB
-    $q=mysqli_query($con,"INSERT INTO clonehistory VALUES('$email','$eid','','','',
+    $q=mysqli_query($con,"INSERT INTO data VALUES('$email','$eid','','','',
     '','$suma', '', '', '',
     '$count_userselecc', '', '', '', NOW() )");
     header("location:account.php?q=quiz&step=1&eid=$eid&page=$i_1");
@@ -79,7 +78,7 @@ else {
     //  Es el numero de personas seleccionadas
         $count_userselecc = array_sum($user_answer);
     // Insertando en DB
-        $qq=mysqli_query($con, "UPDATE `clonehistory` SET `S2`= '$suma' ,`R2`='$count_userselecc' WHERE email = '$email' AND eid = '$eid' ");
+        $qq=mysqli_query($con, "UPDATE `data` SET `S2`= '$suma' ,`R2`='$count_userselecc' WHERE email = '$email' AND eid = '$eid' ");
         header("location:account.php?q=result&eid=$eid");
         }
     }

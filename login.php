@@ -32,8 +32,34 @@ if($count==1){
 
 }
 else
-//echo "$result"; echo "$result";
 
-header("location:$ref?w=Usuario o contraseña erróneos");
+    echo '<div> Usuario o contraseña erróneos. Intente de nuevo por favor </div> 
+    <div class="logos">
+    <a href="feedback.php"  target="_self" class="btn_attendance">Confirmar asistencia</a>
+        </div>'
+    ;
+
 
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
