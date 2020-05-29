@@ -25,7 +25,7 @@
 <div class="card fat">
 <div class="card-body">
 
-<form class="form-horizontal" name="form" action="login.php?q=index.php" method="POST">
+<form class="form-horizontal" name="form" action="login.php?q=feedback.php" method="POST">
 <h4 class="card-title">Confirmar asistencia</h4>
 
 <div class="form-group">
