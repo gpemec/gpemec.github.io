@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3308
--- Generation Time: May 29, 2020 at 09:19 PM
+-- Generation Time: May 29, 2020 at 09:22 PM
 -- Server version: 8.0.18
 -- PHP Version: 7.4.0
 
@@ -43,38 +43,6 @@ CREATE TABLE IF NOT EXISTS `admin` (
 INSERT INTO `admin` (`admin_id`, `email`, `password`) VALUES
 (1, 'denisse@gmail.com', '123456'),
 (2, 'admin@admin.com', 'admin1');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `clonehistory_clone`
---
-
-DROP TABLE IF EXISTS `clonehistory_clone`;
-CREATE TABLE IF NOT EXISTS `clonehistory_clone` (
-  `email` varchar(50) NOT NULL,
-  `eid` text NOT NULL,
-  `asistencia` int(11) NOT NULL,
-  `invitados_adicionales` int(11) NOT NULL,
-  `S0` varchar(255) DEFAULT NULL,
-  `S1` varchar(255) DEFAULT NULL,
-  `S2` varchar(255) DEFAULT NULL,
-  `S3` varchar(255) DEFAULT NULL,
-  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `clonehistory_clone`
---
-
-INSERT INTO `clonehistory_clone` (`email`, `eid`, `asistencia`, `invitados_adicionales`, `S0`, `S1`, `S2`, `S3`) VALUES
-('lupita', 'asdkjg51ap', 0, 0, '0.34', '0', '0', '0'),
-('lupita', 'asdkjg51ap', 0, 0, '0.34', '0', '0', '0'),
-('lupita', 'asdkjg51ap', 0, 0, '0.34', '0', '0', '0'),
-('lupita', 'asdkjg51ap', 0, 0, '0.34', '0', '0', '0'),
-('lupita', 'asdkjg51ap', 0, 0, '0.34', '0', '0', '0'),
-('den', 'kmasa873m', 0, 0, '0.34', '0', '1.02', '0'),
-('den', 'kmasa873m', 0, 0, '0.34', '0', '1.02', '0');
 
 -- --------------------------------------------------------
 
